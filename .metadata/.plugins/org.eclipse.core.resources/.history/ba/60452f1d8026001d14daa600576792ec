@@ -1,0 +1,34 @@
+package com.casestudy.hectordiaz.service;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.casestudy.hectordiaz.model.Claims_model;
+import com.casestudy.hectordiaz.repository.Claims_repository;
+
+@Service 
+public class Claims_service {
+	
+	@Autowired
+	Claims_repository claims_repository;
+	
+	public ArrayList<Claims_model> getClaims(){
+		
+		return (ArrayList<Claims_model>) claims_repository.findAll();
+	}
+
+	public Claims_model addClaim(Claims_model claim) {
+		
+		return claims_repository.save(claim);
+	}
+	
+	public String deleteClaim(Long id) {
+		
+	claims_repository.deleteById(id);
+	
+	return "The claism has been Deleted";
+	}
+	
+}

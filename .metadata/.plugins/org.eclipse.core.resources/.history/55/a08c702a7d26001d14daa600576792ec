@@ -1,0 +1,5 @@
+package com.casestudy.hectordiaz.repository;
+
+public interface Claims_repository {
+
+}

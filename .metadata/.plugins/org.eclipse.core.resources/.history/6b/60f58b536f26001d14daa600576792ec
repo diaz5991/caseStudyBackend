@@ -1,0 +1,11 @@
+package com.casestudy.hectordiaz.service;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class Users_service {
+	
+	@AutoWired
+	
+
+}

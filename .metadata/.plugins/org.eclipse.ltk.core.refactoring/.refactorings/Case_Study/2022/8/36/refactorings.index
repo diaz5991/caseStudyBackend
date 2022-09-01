@@ -1,0 +1,9 @@
+1661649344020	Rename type 'User_Model'
+1661649356707	Rename compilation unit 'User_service.java'
+1661652049952	Rename type 'Users_service'
+1661652175205	Rename type 'Users_Service'
+1661652186581	Rename type 'Users_Repository'
+1661652206036	Rename type 'Users_Model'
+1661652217986	Rename type 'LoginController'
+1661655277040	Delete element
+1661655436004	Encapsulate field 'userClaim'
