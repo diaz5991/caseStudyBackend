@@ -1,0 +1,28 @@
+package com.casestudy.hectordiaz.service;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.casestudy.hectordiaz.model.File_model;
+import com.casestudy.hectordiaz.repository.File_repository;
+
+@Service
+public class File_service {
+
+	@Autowired
+	File_repository file_repository;
+
+	public ArrayList<File_model> getFiles(Long id) {
+
+		return null;
+
+	}
+
+	public File_model addFile(File_model file) {
+
+		return file_repository.save(file);
+	}
+
+}

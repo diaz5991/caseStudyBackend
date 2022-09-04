@@ -1,0 +1,53 @@
+package com.casestudy.hectordiaz.service;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+
+import com.casestudy.hectordiaz.model.File_model;
+import com.casestudy.hectordiaz.repository.File_repository;
+
+@Service
+public class File_service {
+
+	@Autowired
+	File_repository file_repository;
+
+	public ArrayList<File_model> getFiles() {
+
+		return null;
+
+	}
+
+	public void addFile(MultipartFile file) {
+
+		File_model fileModel = new File_model();
+
+		try {
+			fileModel.setFile(file.getBytes());
+			fileModel.setName(file.getOriginalFilename());
+			fileModel.setType(file.getContentType());
+			file_repository.save(fileModel);
+
+			System.out.println(fileModel.getName() + fileModel.getFile() + fileModel.getType());
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public File_model viewFile(Long id) {
+		
+		return file_repository.getOne(id);
+	}
+
+}

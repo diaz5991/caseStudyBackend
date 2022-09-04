@@ -22,6 +22,8 @@ public class Claims_model {
 	private String color;
 	private String plates;
 	private String userClaim;
+	//@Lob
+	//private byte[]  file;
 
 	public Long getId() {
 		return id;
@@ -84,5 +86,13 @@ public class Claims_model {
 		return "Claims_model [id=" + id + ", description=" + description + ", status=" + status + ", model=" + model
 				+ ", color=" + color + ", plates=" + plates + "]";
 	}
+
+	/*public byte[] getFile() {
+		return file;
+	}
+
+	public void setFile(byte[] file) {
+		this.file = file;
+	}*/
 
 }
