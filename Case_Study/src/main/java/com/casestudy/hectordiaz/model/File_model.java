@@ -15,12 +15,14 @@ public class File_model {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(nullable = true, unique = true)
+	private Long id;
 	private String name;
 	private String type;
 	@Lob
 	private byte[] file;
 	
 	public File_model() {
+		super();
 		
 	}
 	public File_model(String name, String type, byte[] file) {

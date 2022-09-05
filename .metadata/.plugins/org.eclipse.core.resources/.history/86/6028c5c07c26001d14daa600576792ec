@@ -1,7 +1,0 @@
-package com.casestudy.hectordiaz.service;
-
-
-@Service
-public class Claims_repository {
-
-}

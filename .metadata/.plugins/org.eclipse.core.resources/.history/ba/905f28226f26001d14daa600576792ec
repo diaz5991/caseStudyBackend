@@ -1,5 +1,0 @@
-package com.casestudy.hectordiaz.repository;
-
-public interface Users_Repository {
-
-}

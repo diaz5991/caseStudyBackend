@@ -1,0 +1,19 @@
+package com.casestudy.hectordiaz.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.casestudy.hectordiaz.model.AuthenticationBean;
+
+@RestController
+@RequestMapping
+public class BasicAuthentication_controller {
+	
+	@GetMapping 
+	public 	AuthenticationBean bean() {
+		
+		return new AuthenticationBean("You are athenticated");
+	}
+
+}
