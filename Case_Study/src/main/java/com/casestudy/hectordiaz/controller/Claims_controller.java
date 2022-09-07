@@ -10,6 +10,8 @@ import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,6 +29,7 @@ import com.casestudy.hectordiaz.model.File_model;
 import com.casestudy.hectordiaz.repository.File_repository;
 import com.casestudy.hectordiaz.service.Claims_service;
 import com.casestudy.hectordiaz.service.File_service;
+import com.casestudy.hectordiaz.service.File_service2;
 
 @CrossOrigin(origins = "http://localhost:4200/")
 @RestController
@@ -35,8 +38,8 @@ public class Claims_controller {
 
 	@Autowired
 	Claims_service claims_service;
+	@Autowired
 	File_service file_service;
-	File_repository file_repository;
 
 	@GetMapping("getClaims")
 	public ArrayList<Claims_model> getClaims() {
@@ -72,13 +75,15 @@ public class Claims_controller {
 	public File_model addFile(@RequestParam("file") MultipartFile file) throws IOException {
 
 		File_model fileModel = new File_model();
+		Long id = 0l;
 
 		try {
 			fileModel.setFile(file.getBytes());
 			fileModel.setName(file.getOriginalFilename());
 			fileModel.setType(file.getContentType());
+			fileModel.setId(id);
+
 			System.out.println(file.getOriginalFilename());
-			
 
 			System.out.println(fileModel.getName() + fileModel.getFile() + fileModel.getType());
 
@@ -86,8 +91,17 @@ public class Claims_controller {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
+		try {
+
+			file_service.uploadFile(fileModel);
+
+		} catch (NullPointerException e) {
+			String message = e.getMessage();
+		}
+
 		return file_service.uploadFile(fileModel);
+
 	}
 
 	@GetMapping("viewFile/{id}")

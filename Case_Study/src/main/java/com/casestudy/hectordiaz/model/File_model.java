@@ -49,6 +49,12 @@ public class File_model {
 	public void setFile(byte[] file) {
 		this.file = file;
 	}
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	
 	
 	
