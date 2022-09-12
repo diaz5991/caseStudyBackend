@@ -9,7 +9,7 @@ import com.casestudy.hectordiaz.model.AuthenticationBean;
 
 @RestController
 @RequestMapping
-@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "http://localhost:9816/")
 public class BasicAuthentication_controller {
 	
 	@GetMapping("basicAuth")

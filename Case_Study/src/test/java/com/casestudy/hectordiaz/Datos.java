@@ -1,0 +1,19 @@
+package com.casestudy.hectordiaz;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.casestudy.hectordiaz.model.Claims_model;
+
+public class Datos {
+
+	@Autowired
+	Claims_model claims_model;
+
+	public static Optional<Claims_model> crearCuentaPrueba() {
+
+		return Optional.of(new Claims_model("description", "status", "model", "plates"));
+	}
+
+}

@@ -1,0 +1,35 @@
+package com.casestudy.hectordiaz;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.web.servlet.MockMvc;
+
+import com.casestudy.hectordiaz.controller.Claims_controller;
+import com.casestudy.hectordiaz.service.Claims_service;
+
+import static org.junit.jupier.api.Assertions.*;
+
+import static org.mockito.Mockito.*;
+
+import org.junit.jupiter.api.Test;
+
+@WebMvcTest(Claims_controller.class)
+public class Claims_controllerTest {
+
+	Long id = 12L;
+
+	@Autowired
+	private MockMvc mockMvc;
+
+	@MockBean
+	private Claims_service claims_service;
+
+	@Test
+	private void getClaims() {
+		when(claims_service.getClaimById(id)).thenReturn(Datos.crearCuentaPrueba());{
+			
+		}
+		
+	}
+}

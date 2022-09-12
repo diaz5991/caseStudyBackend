@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.casestudy.hectordiaz.model.Users_model;
 import com.casestudy.hectordiaz.service.Users_service;
 
-@CrossOrigin(origins="http://localhost:4200/")
+@CrossOrigin(origins="http://localhost:9816/")
 @RestController
 @RequestMapping("login")
 public class Login_controller {

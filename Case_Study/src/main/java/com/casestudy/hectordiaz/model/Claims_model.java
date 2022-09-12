@@ -15,15 +15,26 @@ public class Claims_model {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(nullable = false, unique = true)
 	private Long id;
-	
+
 	private String description;
-	private boolean status;
+	private String status;
 	private String model;
-	private String color;
 	private String plates;
 	private String userClaim;
-	//@Lob
-	//private byte[]  file;
+	// @Lob
+	// private byte[] file;
+
+	public Claims_model() {
+		super();
+	}
+
+	public Claims_model(String description, String status, String model, String plates) {
+		super();
+		this.description = description;
+		this.status = status;
+		this.model = model;
+		this.plates = plates;
+	}
 
 	public Long getId() {
 		return id;
@@ -41,11 +52,11 @@ public class Claims_model {
 		this.description = description;
 	}
 
-	public boolean isStatus() {
+	public String getStatus() {
 		return status;
 	}
 
-	public void setStatus(boolean status) {
+	public void setStatus(String status) {
 		this.status = status;
 	}
 
@@ -55,14 +66,6 @@ public class Claims_model {
 
 	public void setModel(String model) {
 		this.model = model;
-	}
-
-	public String getColor() {
-		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
 	}
 
 	public String getPlates() {
@@ -84,15 +87,13 @@ public class Claims_model {
 	@Override
 	public String toString() {
 		return "Claims_model [id=" + id + ", description=" + description + ", status=" + status + ", model=" + model
-				+ ", color=" + color + ", plates=" + plates + "]";
+				+ ", plates=" + plates + "]";
 	}
 
-	/*public byte[] getFile() {
-		return file;
-	}
-
-	public void setFile(byte[] file) {
-		this.file = file;
-	}*/
+	/*
+	 * public byte[] getFile() { return file; }
+	 * 
+	 * public void setFile(byte[] file) { this.file = file; }
+	 */
 
 }

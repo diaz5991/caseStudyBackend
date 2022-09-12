@@ -10,8 +10,6 @@ import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,12 +24,11 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.casestudy.hectordiaz.model.Claims_model;
 import com.casestudy.hectordiaz.model.File_model;
-import com.casestudy.hectordiaz.repository.File_repository;
 import com.casestudy.hectordiaz.service.Claims_service;
 import com.casestudy.hectordiaz.service.File_service;
-import com.casestudy.hectordiaz.service.File_service2;
 
-@CrossOrigin(origins = "http://localhost:4200/")
+
+@CrossOrigin(origins = "http://localhost:9816/")
 @RestController
 @RequestMapping("claims")
 public class Claims_controller {
@@ -72,10 +69,11 @@ public class Claims_controller {
 
 	///////////////////////////////////////////////////////////////////////////////////
 	@PostMapping("uploadFile")
-	public File_model addFile(@RequestParam("file") MultipartFile file) throws IOException {
+	public File_model addFile(@RequestParam("file") MultipartFile file,@RequestParam("id") String id) throws IOException {
 
 		File_model fileModel = new File_model();
-		Long id = 0l;
+		System.out.println(id);
+		
 
 		try {
 			fileModel.setFile(file.getBytes());
@@ -92,20 +90,12 @@ public class Claims_controller {
 			e.printStackTrace();
 		}
 
-		try {
-
-			file_service.uploadFile(fileModel);
-
-		} catch (NullPointerException e) {
-			String message = e.getMessage();
-		}
-
 		return file_service.uploadFile(fileModel);
 
 	}
 
 	@GetMapping("viewFile/{id}")
-	public ResponseEntity<Resource> viewFile(@PathVariable Long id) {
+	public ResponseEntity<Resource> viewFile(@PathVariable String id) {
 
 		File_model file = (File_model) file_service.viewFile(id);
 

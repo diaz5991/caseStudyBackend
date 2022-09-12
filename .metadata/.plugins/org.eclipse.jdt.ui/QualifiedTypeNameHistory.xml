@@ -51,4 +51,7 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="com.casestudy.hectordiaz.model.AuthenticationBean"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.CrossOrigin"/>
+<fullyQualifiedTypeName name="com.casestudy.hectordiaz.service.File_service2"/>
+<fullyQualifiedTypeName name="org.springframework.security.core.Authentication"/>
+<fullyQualifiedTypeName name="org.springframework.security.core.context.SecurityContextHolder"/>
 </qualifiedTypeNameHistroy>

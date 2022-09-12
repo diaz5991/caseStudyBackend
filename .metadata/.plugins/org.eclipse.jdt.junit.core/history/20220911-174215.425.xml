@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CaseStudyApplicationTests" project="Case_Study" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.casestudy.hectordiaz.CaseStudyApplicationTests" time="0.185" displayname="CaseStudyApplicationTests" uniqueid="[engine:junit-jupiter]/[class:com.casestudy.hectordiaz.CaseStudyApplicationTests]">
+    <testcase name="contextLoads" classname="com.casestudy.hectordiaz.CaseStudyApplicationTests" time="0.185" displayname="contextLoads()" uniqueid="[engine:junit-jupiter]/[class:com.casestudy.hectordiaz.CaseStudyApplicationTests]/[method:contextLoads()]"/>
+  </testsuite>
+</testrun>
