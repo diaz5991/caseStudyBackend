@@ -27,8 +27,7 @@ import com.casestudy.hectordiaz.model.File_model;
 import com.casestudy.hectordiaz.service.Claims_service;
 import com.casestudy.hectordiaz.service.File_service;
 
-
-@CrossOrigin(origins = "http://localhost:9816/")
+@CrossOrigin(origins = "http://localhost:3761/")
 @RestController
 @RequestMapping("claims")
 public class Claims_controller {
@@ -67,13 +66,12 @@ public class Claims_controller {
 		return claims_service.updateClaim(claimUpdate);
 	}
 
-	///////////////////////////////////////////////////////////////////////////////////
 	@PostMapping("uploadFile")
-	public File_model addFile(@RequestParam("file") MultipartFile file,@RequestParam("id") String id) throws IOException {
+	public File_model addFile(@RequestParam("file") MultipartFile file, @RequestParam("id") String id)
+			throws IOException {
 
 		File_model fileModel = new File_model();
 		System.out.println(id);
-		
 
 		try {
 			fileModel.setFile(file.getBytes());

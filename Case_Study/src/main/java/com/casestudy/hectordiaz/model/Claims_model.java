@@ -28,12 +28,24 @@ public class Claims_model {
 		super();
 	}
 
+	public Claims_model(Long id,String description, String status, String model, String plates) {
+		super();
+		this.id =id;
+		this.description = description;
+		this.status = status;
+		this.model = model;
+		this.plates = plates;
+	}
+	
+	
+
 	public Claims_model(String description, String status, String model, String plates) {
 		super();
 		this.description = description;
 		this.status = status;
 		this.model = model;
 		this.plates = plates;
+	
 	}
 
 	public Long getId() {

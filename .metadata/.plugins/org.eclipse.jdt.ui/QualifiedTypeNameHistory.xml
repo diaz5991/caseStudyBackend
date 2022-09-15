@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.casestudy.hectordiaz.model.User_Model"/>
-<fullyQualifiedTypeName name="com.casestudy.hectordiaz.repository.Users_Repository"/>
 <fullyQualifiedTypeName name="com.casestudy.hectordiaz.model.Users_Model"/>
 <fullyQualifiedTypeName name="com.casestudy.hectordiaz.service.Users_Service"/>
-<fullyQualifiedTypeName name="com.casestudy.hectordiaz.repository.Claims_repository"/>
 <fullyQualifiedTypeName name="com.casestudy.hectordiaz.model.Claims_model"/>
 <fullyQualifiedTypeName name="com.casestudy.hectordiaz.service.Claims_service"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
@@ -23,7 +20,6 @@
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.Optional"/>
 <fullyQualifiedTypeName name="com.casestudy.hectordiaz.service.File_service"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="java.util.zip.Deflater"/>
@@ -54,4 +50,14 @@
 <fullyQualifiedTypeName name="com.casestudy.hectordiaz.service.File_service2"/>
 <fullyQualifiedTypeName name="org.springframework.security.core.Authentication"/>
 <fullyQualifiedTypeName name="org.springframework.security.core.context.SecurityContextHolder"/>
+<fullyQualifiedTypeName name="org.mockito.InjectMocks"/>
+<fullyQualifiedTypeName name="org.junit.runner.RunWith"/>
+<fullyQualifiedTypeName name="org.mockito.Mock"/>
+<fullyQualifiedTypeName name="org.springframework.boot.test.mock.mockito.MockBean"/>
+<fullyQualifiedTypeName name="com.casestudy.hectordiaz.repository.Claims_repository"/>
+<fullyQualifiedTypeName name="org.mockito.Mockito"/>
+<fullyQualifiedTypeName name="java.util.Optional"/>
+<fullyQualifiedTypeName name="org.junit.jupiter.api.extension.ExtendWith"/>
+<fullyQualifiedTypeName name="org.mockito.junit.jupiter.MockitoExtension"/>
+<fullyQualifiedTypeName name="org.springframework.test.context.junit.jupiter.SpringExtension"/>
 </qualifiedTypeNameHistroy>

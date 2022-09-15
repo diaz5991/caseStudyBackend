@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.casestudy.hectordiaz.model.Users_model;
 import com.casestudy.hectordiaz.service.Users_service;
 
-@CrossOrigin(origins="http://localhost:9816/")
+@CrossOrigin(origins = "http://localhost:3761/")
 @RestController
 @RequestMapping("login")
 public class Login_controller {
@@ -24,23 +24,22 @@ public class Login_controller {
 	Users_service users_service;
 
 	@PostMapping("newUser")
-
 	public Users_model createNewUser(@RequestBody Users_model user) {
 
 		return users_service.createNewUser(user);
 	}
-	
-	@GetMapping("getUsers")	
-	public ArrayList<Users_model> getUsers(){
+
+	@GetMapping("getUsers")
+	public ArrayList<Users_model> getUsers() {
 		return users_service.getAllUsers();
-		
+
 	}
-	
+
 	@DeleteMapping("deleteUser/{id}")
 	public String deleteUser(@PathVariable Long id) {
-		
-		 users_service.deleteUser(id);
-		 
-		 return "El Usuario ha sido eliminado con exito";
+
+		users_service.deleteUser(id);
+
+		return "El Usuario ha sido eliminado con exito";
 	}
 }

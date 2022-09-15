@@ -1,0 +1,30 @@
+package com.casestudy.hectordiaz;
+
+import java.util.ArrayList;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.casestudy.hectordiaz.model.Claims_model;
+
+public class Datos {
+
+	@Autowired
+	Claims_model claims_model;
+
+	public static Optional<Claims_model> crearCuentaPrueba(Long id) {
+
+		return Optional.of(new Claims_model(id,"description", "status", "model", "plates"));
+	}
+	
+	public static Claims_model crearCuentaPrueba2(Long id) {
+
+		return new Claims_model(id,"description", "status", "model", "plates");
+	}
+	
+	public static Claims_model crearCuentaPrueba3(Long id) {
+
+		return new Claims_model(id,"description", "status", "model", "plates");
+	}
+
+}

@@ -12,28 +12,10 @@ public class File_service {
 	@Autowired
 	File_repository file_repository;
 
-	public void uploadFiles() {
-		System.out.println("before saving other method testing");
-	}
-	
 	public File_model uploadFile(File_model file) {
-		
 
 		System.out.println("before saving");
 		return file_repository.save(file);
-		/*
-		 * File_model fileModel = new File_model();
-		 * 
-		 * try { fileModel.setFile(file.getBytes());
-		 * fileModel.setName(file.getOriginalFilename());
-		 * fileModel.setType(file.getContentType()); file_repository.save(fileModel);
-		 * 
-		 * System.out.println(fileModel.getName() + fileModel.getFile() +
-		 * fileModel.getType());
-		 * 
-		 * } catch (IOException e) { // TODO Auto-generated catch block
-		 * e.printStackTrace(); }
-		 */
 
 	}
 
